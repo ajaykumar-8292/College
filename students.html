@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Students Management</title>
+
+<link rel="stylesheet" href="students.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+<i class="fa-solid fa-graduation-cap"></i>
+<h2>CollegeMS</h2>
+</div>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li class="active">
+<a href="#">
+<i class="fa-solid fa-user-graduate"></i>
+Students
+</a>
+</li>
+
+<li>
+<a href="teachers.html">
+<i class="fa-solid fa-chalkboard-user"></i>
+Teachers
+</a>
+</li>
+
+<li>
+<a href="attendance.html">
+<i class="fa-solid fa-calendar-check"></i>
+Attendance
+</a>
+</li>
+
+<li>
+<a href="fees.html">
+<i class="fa-solid fa-money-bill-wave"></i>
+Fees
+</a>
+</li>
+
+<li>
+<a href="results.html">
+<i class="fa-solid fa-square-poll-vertical"></i>
+Results
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>Student Management</h1>
+
+<input
+type="text"
+id="searchStudent"
+placeholder="Search Student">
+
+</div>
+
+<!-- Add Student -->
+
+<div class="student-form">
+
+<h2>Add Student</h2>
+
+<form id="studentForm">
+
+<input
+type="text"
+id="name"
+placeholder="Student Name"
+required>
+
+<input
+type="text"
+id="roll"
+placeholder="Roll Number"
+required>
+
+<input
+type="text"
+id="course"
+placeholder="Course"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Email"
+required>
+
+<button type="submit">
+
+Add Student
+
+</button>
+
+</form>
+
+</div>
+
+<!-- Student Table -->
+
+<div class="student-table">
+
+<h2>Student List</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Roll</th>
+<th>Course</th>
+<th>Email</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="studentTable">
+
+<tr>
+
+<td>1</td>
+
+<td>Rahul Kumar</td>
+
+<td>BCA101</td>
+
+<td>BCA</td>
+
+<td>rahul@gmail.com</td>
+
+<td>
+
+<button class="edit">
+
+Edit
+
+</button>
+
+<button class="delete">
+
+Delete
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="students.js"></script>
+
+</body>
+
+</html>

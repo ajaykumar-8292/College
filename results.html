@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Results Management | College Management System</title>
+
+<link rel="stylesheet" href="results.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= Sidebar ================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h2>CollegeMS</h2>
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="students.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                Students
+            </a>
+        </li>
+
+        <li>
+            <a href="teachers.html">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                Teachers
+            </a>
+        </li>
+
+        <li>
+            <a href="attendance.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                Attendance
+            </a>
+        </li>
+
+        <li>
+            <a href="fees.html">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Fees
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                Results
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- ================= Main ================= -->
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>Results Management</h1>
+
+        <input
+        type="text"
+        id="searchResult"
+        placeholder="Search Student">
+
+    </div>
+
+    <!-- Result Form -->
+
+    <div class="result-form">
+
+        <h2>Add Student Result</h2>
+
+        <form id="resultForm">
+
+            <input
+            type="text"
+            id="studentName"
+            placeholder="Student Name"
+            required>
+
+            <input
+            type="text"
+            id="rollNumber"
+            placeholder="Roll Number"
+            required>
+
+            <input
+            type="number"
+            id="english"
+            placeholder="English Marks"
+            min="0"
+            max="100"
+            required>
+
+            <input
+            type="number"
+            id="math"
+            placeholder="Math Marks"
+            min="0"
+            max="100"
+            required>
+
+            <input
+            type="number"
+            id="science"
+            placeholder="Science Marks"
+            min="0"
+            max="100"
+            required>
+
+            <input
+            type="number"
+            id="computer"
+            placeholder="Computer Marks"
+            min="0"
+            max="100"
+            required>
+
+            <button type="submit">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Result
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Result Table -->
+
+    <div class="result-table">
+
+        <h2>Student Results</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Roll</th>
+                    <th>Total</th>
+                    <th>Percentage</th>
+                    <th>Grade</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="resultTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="results.js"></script>
+
+</body>
+</html>

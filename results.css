@@ -1,0 +1,411 @@
+/* =====================================
+   GOOGLE FONT
+===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f7fc;
+}
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:250px;
+    height:100vh;
+    background:#0d6efd;
+    color:#fff;
+    padding:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.logo i{
+    font-size:32px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin:10px 0;
+}
+
+.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#fff;
+    padding:14px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar li.active a,
+.sidebar a:hover{
+    background:#fff;
+    color:#0d6efd;
+}
+
+/* =====================================
+   MAIN
+===================================== */
+
+.main{
+    width:calc(100% - 250px);
+    margin-left:250px;
+    padding:30px;
+}
+
+/* =====================================
+   TOPBAR
+===================================== */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.topbar h1{
+    color:#0d6efd;
+    font-size:32px;
+}
+
+.topbar input{
+    width:300px;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+.topbar input:focus{
+    border-color:#0d6efd;
+}
+
+/* =====================================
+   RESULT FORM
+===================================== */
+
+.result-form{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.result-form h2{
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+#resultForm{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+#resultForm input{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+#resultForm input:focus{
+    border-color:#0d6efd;
+}
+
+#resultForm button{
+    grid-column:span 2;
+    padding:14px;
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+#resultForm button:hover{
+    background:#084298;
+    transform:translateY(-2px);
+}
+
+#resultForm button i{
+    margin-right:8px;
+}
+
+
+/* =====================================
+   RESULT TABLE
+===================================== */
+
+.result-table{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.result-table h2{
+    color:#0d6efd;
+    margin-bottom:20px;
+    font-size:26px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#0d6efd;
+    color:#fff;
+}
+
+th{
+    padding:15px;
+    text-align:left;
+    font-weight:600;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid #e9ecef;
+}
+
+tbody tr{
+    transition:0.3s;
+}
+
+tbody tr:hover{
+    background:#f8fbff;
+}
+
+/* =====================================
+   GRADE BADGES
+===================================== */
+
+.grade-a-plus{
+    background:#198754;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-weight:600;
+    display:inline-block;
+}
+
+.grade-a{
+    background:#20c997;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-weight:600;
+    display:inline-block;
+}
+
+.grade-b{
+    background:#0d6efd;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-weight:600;
+    display:inline-block;
+}
+
+.grade-c{
+    background:#ffc107;
+    color:#212529;
+    padding:6px 14px;
+    border-radius:20px;
+    font-weight:600;
+    display:inline-block;
+}
+
+.grade-d{
+    background:#fd7e14;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-weight:600;
+    display:inline-block;
+}
+
+.grade-fail{
+    background:#dc3545;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-weight:600;
+    display:inline-block;
+}
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+.edit-btn{
+    background:#198754;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:8px;
+    transition:.3s;
+}
+
+.edit-btn:hover{
+    background:#157347;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+}
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#eef2f7;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#0d6efd;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#084298;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:992px){
+
+    .sidebar{
+        width:220px;
+    }
+
+    .main{
+        width:calc(100% - 220px);
+        margin-left:220px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    body{
+        display:block;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+
+    .main{
+        width:100%;
+        margin-left:0;
+        padding:20px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .topbar input{
+        width:100%;
+    }
+
+    #resultForm{
+        grid-template-columns:1fr;
+    }
+
+    #resultForm button{
+        grid-column:span 1;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .result-table{
+        overflow-x:auto;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .topbar h1{
+        font-size:24px;
+    }
+
+    .result-form,
+    .result-table{
+        padding:18px;
+    }
+
+    th,
+    td{
+        padding:12px;
+        font-size:14px;
+    }
+
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Management</title>
+
+    <link rel="stylesheet" href="attendance.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-graduation-cap"></i>
+
+        <h2>CollegeMS</h2>
+
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="students.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                Students
+            </a>
+        </li>
+
+        <li>
+            <a href="teachers.html">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                Teachers
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="#">
+                <i class="fa-solid fa-calendar-check"></i>
+                Attendance
+            </a>
+        </li>
+
+        <li>
+            <a href="fees.html">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Fees
+            </a>
+        </li>
+
+        <li>
+            <a href="results.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Results
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>Attendance Management</h1>
+
+        <input
+        type="text"
+        id="searchAttendance"
+        placeholder="Search Student">
+
+    </div>
+
+    <!-- Attendance Form -->
+
+    <div class="attendance-form">
+
+        <h2>Mark Attendance</h2>
+
+        <form id="attendanceForm">
+
+            <input
+            type="text"
+            id="studentName"
+            placeholder="Student Name"
+            required>
+
+            <input
+            type="text"
+            id="rollNumber"
+            placeholder="Roll Number"
+            required>
+
+            <input
+            type="date"
+            id="attendanceDate"
+            required>
+
+            <select id="attendanceStatus">
+
+                <option value="Present">
+                    Present
+                </option>
+
+                <option value="Absent">
+                    Absent
+                </option>
+
+            </select>
+
+            <button type="submit">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Attendance
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Attendance Table -->
+
+    <div class="attendance-table">
+
+        <h2>Attendance Records</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Roll</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="attendanceTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="attendance.js"></script>
+
+</body>
+
+</html>

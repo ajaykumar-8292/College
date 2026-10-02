@@ -1,0 +1,294 @@
+/* ===================================
+   Google Font
+=================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===================================
+   Reset
+=================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f7fc;
+}
+
+/* ===================================
+   Sidebar
+=================================== */
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:250px;
+    height:100vh;
+    background:#0d6efd;
+    color:#fff;
+    padding:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.logo i{
+    font-size:32px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin:10px 0;
+}
+
+.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#fff;
+    padding:14px 16px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar li.active a,
+.sidebar a:hover{
+    background:#fff;
+    color:#0d6efd;
+}
+
+/* ===================================
+   Main
+=================================== */
+
+.main{
+    width:calc(100% - 250px);
+    margin-left:250px;
+    padding:30px;
+}
+
+/* ===================================
+   Topbar
+=================================== */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.topbar h1{
+    color:#0d6efd;
+}
+
+.topbar input{
+    width:280px;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+.topbar input:focus{
+    border-color:#0d6efd;
+}
+
+/* ===================================
+   Teacher Form
+=================================== */
+
+.teacher-form{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.teacher-form h2{
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+#teacherForm{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+#teacherForm input{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+#teacherForm input:focus{
+    border-color:#0d6efd;
+}
+
+#teacherForm button{
+    grid-column:span 2;
+    padding:14px;
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#teacherForm button:hover{
+    background:#084298;
+}
+
+/* ===================================
+   Table
+=================================== */
+
+.teacher-table{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.teacher-table h2{
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#0d6efd;
+    color:#fff;
+}
+
+th,
+td{
+    padding:15px;
+    text-align:left;
+}
+
+tbody tr{
+    border-bottom:1px solid #eee;
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#f8fbff;
+}
+
+/* ===================================
+   Buttons
+=================================== */
+
+.edit-btn{
+    background:#198754;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:8px;
+}
+
+.edit-btn:hover{
+    background:#157347;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media(max-width:992px){
+
+    .sidebar{
+        width:220px;
+    }
+
+    .main{
+        width:calc(100% - 220px);
+        margin-left:220px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    body{
+        display:block;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    .main{
+        width:100%;
+        margin-left:0;
+        padding:20px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .topbar input{
+        width:100%;
+    }
+
+    #teacherForm{
+        grid-template-columns:1fr;
+    }
+
+    #teacherForm button{
+        grid-column:span 1;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}

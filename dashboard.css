@@ -1,0 +1,273 @@
+/* ===================================
+   GOOGLE FONT
+=================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===================================
+   RESET
+=================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+}
+
+/* ===================================
+   SIDEBAR
+=================================== */
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    background:#0d6efd;
+    color:#fff;
+    padding:25px 20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.logo i{
+    font-size:34px;
+    margin-right:10px;
+}
+
+.logo h2{
+    font-size:26px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:10px 0;
+}
+
+.sidebar ul li a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#fff;
+    padding:14px 16px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a{
+    background:#ffffff;
+    color:#0d6efd;
+}
+
+.sidebar ul li i{
+    width:22px;
+    text-align:center;
+}
+
+/* ===================================
+   MAIN CONTENT
+=================================== */
+
+.main{
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:30px;
+}
+
+/* ===================================
+   TOPBAR
+=================================== */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.topbar h1{
+    color:#0d6efd;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#fff;
+    padding:8px 15px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.profile img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+.profile span{
+    font-weight:600;
+}
+
+/* ===================================
+   DASHBOARD CARDS
+=================================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card i{
+    font-size:40px;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.card h2{
+    font-size:18px;
+    color:#666;
+    margin-bottom:10px;
+}
+
+.card h1{
+    font-size:36px;
+    color:#222;
+}
+
+/* ===================================
+   TABLE
+=================================== */
+
+.table-section{
+    background:#fff;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.table-section h2{
+    margin-bottom:20px;
+    color:#0d6efd;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#0d6efd;
+    color:#fff;
+}
+
+th,
+td{
+    padding:15px;
+    text-align:left;
+}
+
+tbody tr{
+    border-bottom:1px solid #eee;
+}
+
+tbody tr:hover{
+    background:#f8f9fa;
+}
+
+.active-status{
+    background:#198754;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.pending-status{
+    background:#ffc107;
+    color:#000;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:991px){
+
+    .sidebar{
+        width:220px;
+    }
+
+    .main{
+        margin-left:220px;
+        width:calc(100% - 220px);
+    }
+
+}
+
+@media(max-width:768px){
+
+    body{
+        display:block;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    .main{
+        width:100%;
+        margin-left:0;
+        padding:20px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        gap:20px;
+        align-items:flex-start;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+}

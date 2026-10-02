@@ -1,0 +1,360 @@
+/* =====================================
+   GOOGLE FONT
+===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =====================================
+   RESET
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f7fc;
+}
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#0d6efd;
+    position:fixed;
+    left:0;
+    top:0;
+    color:#fff;
+    padding:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.logo i{
+    font-size:32px;
+    margin-right:10px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:10px 0;
+}
+
+.sidebar ul li a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    text-decoration:none;
+    padding:14px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar ul li.active a,
+.sidebar ul li a:hover{
+
+    background:#fff;
+    color:#0d6efd;
+
+}
+
+/* =====================================
+   MAIN
+===================================== */
+
+.main{
+
+    width:calc(100% - 250px);
+    margin-left:250px;
+    padding:30px;
+
+}
+
+/* =====================================
+   TOPBAR
+===================================== */
+
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+
+}
+
+.topbar h1{
+
+    color:#0d6efd;
+
+}
+
+.topbar input{
+
+    width:280px;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+
+}
+
+.topbar input:focus{
+
+    border-color:#0d6efd;
+
+}
+
+/* =====================================
+   FORM
+===================================== */
+
+.student-form{
+
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    margin-bottom:30px;
+
+}
+
+.student-form h2{
+
+    color:#0d6efd;
+    margin-bottom:20px;
+
+}
+
+#studentForm{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+}
+
+#studentForm input{
+
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+
+}
+
+#studentForm input:focus{
+
+    border-color:#0d6efd;
+
+}
+
+#studentForm button{
+
+    grid-column:span 2;
+    padding:14px;
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+
+}
+
+#studentForm button:hover{
+
+    background:#084298;
+
+}
+
+/* =====================================
+   TABLE
+===================================== */
+
+.student-table{
+
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.student-table h2{
+
+    color:#0d6efd;
+    margin-bottom:20px;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#0d6efd;
+    color:#fff;
+
+}
+
+th,
+td{
+
+    padding:15px;
+    text-align:left;
+
+}
+
+tbody tr{
+
+    border-bottom:1px solid #eee;
+
+}
+
+tbody tr:hover{
+
+    background:#f8f9fa;
+
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.edit{
+
+    background:#198754;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:8px;
+
+}
+
+.delete{
+
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+
+}
+
+.edit:hover{
+
+    background:#157347;
+
+}
+
+.delete:hover{
+
+    background:#bb2d3b;
+
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        width:220px;
+
+    }
+
+    .main{
+
+        width:calc(100% - 220px);
+        margin-left:220px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    body{
+
+        display:block;
+
+    }
+
+    .sidebar{
+
+        width:100%;
+        height:auto;
+        position:relative;
+
+    }
+
+    .main{
+
+        width:100%;
+        margin-left:0;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+    .topbar input{
+
+        width:100%;
+
+    }
+
+    #studentForm{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #studentForm button{
+
+        grid-column:span 1;
+
+    }
+
+    table{
+
+        display:block;
+        overflow-x:auto;
+
+    }
+
+}
